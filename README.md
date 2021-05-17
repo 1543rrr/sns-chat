@@ -34,8 +34,8 @@ Things you may want to cover:
 | password              | string | null: false |
 | name                  | string | null: false |
 |gender(性別)            | string |null: false  |
-### Association
 
+### Association
 - has_many :posts
 - has_many :room_users
 - has_many :comments
@@ -43,17 +43,18 @@ Things you may want to cover:
 
 ## posts テーブル
 
-| Column                       | Type                 | Options     |
-| -----------------------------| --------------       | ----------- |
-| title                        | string               | null: false |
-| self introduction(自己紹介)    | text                 | null: false |
-| user_id   　　　　　　　　　　　 |integer                | null: false, foreign_key: true|
-|musical_instrument_id （楽器） |inter                     |null: false|
-|department_id(学科)      　　　 |integer               |null: fals |
-|undergraduate_id(学部)            |integer               |null: false|
-|course_id(コース)                  |integer　             ｜null：false｜
-|image                          |integer               |null: false|
-|recruitment_id(募集内容)         |
+| Column                         | Type                    | Options     |
+| ------------------------------ | ------------------------| ----------- |
+| title                          | string                  | null: false |
+| self introduction(自己紹介)      | text                    | null: false |
+| user_id   　　　　　　　　　　　   |integer                  | null: false, foreign_key: true|
+|musical_instrument_id （楽器）   |inter                     |null: false|
+|department_id(学科)      　　　   |integer                   |null: fals |
+|undergraduate_id(学部)           |integer                   |null: false|
+|course_id(コース)                 |integer　                ｜null：false｜
+|image                            |integer                  |null: false|
+|recruitment_id(募集内容)           |
+
 ### Association
 
 - belongs_to :user
@@ -61,11 +62,11 @@ Things you may want to cover:
 
 ## comments テーブル
 
-| Column   | Type       | Options                        |
-| ---------| ---------- | ------------------------------ |
-| comment_content| text       | null: false |
-| user_id  | integer |  null: false, foreign_key: true|
-| post_id  | integer |null: false, foreign_key: true  |
+| Column                | Type       | Options                        |
+| ----------------------| ---------- | ------------------------------ |
+| comment_content       | text       | null: false                    |
+| user_id               | integer    |  null: false, foreign_key: true|
+| post_id               | integer    |null: false, foreign_key: true  |
 
 ### Association
 
